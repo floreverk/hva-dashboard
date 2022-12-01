@@ -1,0 +1,184 @@
+.body {
+    background-color: #fefefa;
+}
+
+.homebutton {
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Dosis', sans-serif;
+    margin-left: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.homegrid {
+    display: grid;
+    grid-template-columns: 25% 70% 5%;
+    object-fit: cover;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.image {
+    object-fit: cover;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 5px;
+    object-position: center center;
+}
+
+.image2 {
+    object-fit: cover;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5px;
+    object-position: center center; 
+}
+
+.leftbanner {
+    display: grid;
+    grid-template-rows: 30% 70%;
+}
+
+h1 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1cm;
+    margin-left: 10px;
+    vertical-align:text-top;
+}
+
+h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 2cm;
+    margin-left: 40px;
+    vertical-align:text-top;
+}
+
+.formgrid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    font-family: 'Dosis', sans-serif;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.general {
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.general div {
+    margin: 5px;
+}
+
+#id_quantity {
+    width: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_idnumber {
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_origin_country {
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_year {
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_origin_city {
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_sector{
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_origin_province {
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_medium_film {
+    width: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_medium_foto {
+    width: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_medium_digitalfoto {
+    width: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_medium_document {
+    width: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_medium_reclame {
+    width: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_medium_audio {
+    width: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_medium_digitalarchive {
+    width: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+#id_medium_objectfoto {
+    width: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.origin {
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.options div {
+    margin: 5px;
+}
+
+.width {
+    max-width: 10px;
+    margin-right: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    font-family: 'Dosis', sans-serif;
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 5px;
+}
+

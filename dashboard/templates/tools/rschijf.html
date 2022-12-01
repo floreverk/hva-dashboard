@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Dosis:wght@200;300;400&family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'templates/tools/rschijf.css' %}">
+    <title>R-Schijf Tool</title>
+</head>
+<body class='body'>
+    <div class='homegrid'>
+        <div class='leftbanner'>
+            <div class='images'>
+                <img class='image' src="\static\images\logohvaffaa1d.jpeg">
+                <img class='image2' src="\static\images\rschijf.png">
+            </div>
+        </div>
+        <div class='main'>
+            <div class='header'>
+                <h1>R-Schijf Look-up</h1>
+            </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+    <div class='homegrid'>
+        <div>
+            <div class='leftbox'>
+                <div>
+                    <button onclick="window.location.href='/'" class="homebutton">HOME</button>
+                </div>
+                <div class='line'>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class='lookup'>
+                <div class="form">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="grid">
+                            <p class='title'>Provide objectnumber</p>{{form.objectnumber}}
+                            <div>
+                                <button type="submit" class="homebutton">Get location</button>
+                            </div>
+                            <div>{{ padnaam|safe }}
+                            </div>
+                        </div>
+                    </form>
+                </div>      
+            </div>
+        </div>
+        <div>
+        </div>
+    </div>
+</body>
+</html>

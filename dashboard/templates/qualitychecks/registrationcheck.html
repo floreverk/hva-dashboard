@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'templates/qualitychecks/registrationcheck.css' %}">
+    <title>Registration Quality</title>
+</head>
+<body class='body'>
+    <div class='homegrid'>
+        <div class='leftbanner'>
+            <div class='images'>
+                <img class='image' src="\static\images\logohva08e8de.jpeg">
+                <img class='image2' src="\static\images\registration.png">
+            </div>
+        </div>
+        <div class='main'>
+            <div class='header'>
+                <h1>Registration Quality Checks</h1>
+            </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+    <div class='homegrid'>
+        <div>
+            <div class='leftbox'>
+                <div>
+                    <button onclick="window.location.href='/'" class="homebutton">HOME</button>
+                </div>
+                <div class='line'>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class='leftbox'>
+                <div class="form">
+                    <form method="post">
+                        {% csrf_token %}
+                        <p class='title'>Select your choice:</p>
+                        <div class="grid">
+                            <div class='options'>
+                                <p>Full Collection</p>{{form.full_collection}}
+                                <div class='line'></div>
+                                <div class='line'></div>
+                                <p>Associatie</p>{{form.association}}
+                                <p>Enter an association:</p> {{form.filterterm}}
+                            </div>
+                            <div>
+                                <button type="submit" class="homebutton">Run Qualitycheck</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class='list'>
+                    <table class='table'>
+                        <tr>
+                          <th>Sheet Number</th>
+                          <th>Info</th>
+                        </tr>
+                        <tr>
+                          <td>#01</td>
+                          <td>missing object_name</td>
+                        </tr>
+                        <tr>
+                            <td>#02</td>
+                            <td>missing title</td>
+                        </tr>
+                        <tr>
+                            <td>#03</td>
+                            <td>missing images</td>
+                        </tr>
+                        <tr>
+                            <td>#04</td>
+                            <td>missing associated_subject</td>
+                        </tr>
+                        <tr>
+                            <td>#05</td>
+                            <td>wrong institution name</td>
+                        </tr>
+                        <tr>
+                            <td>#06</td>
+                            <td>missing associated_period</td>
+                        </tr>
+                        <tr>
+                            <td>#07</td>
+                            <td>missing associated_subject Gent</td>
+                        </tr>
+                        <tr>
+                            <td>#08</td>
+                            <td>missing or wrong onderscheidende_kenmerken</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

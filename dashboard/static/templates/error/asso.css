@@ -1,0 +1,28 @@
+.body {
+    background-color: #fefefa;
+}
+
+h1 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1cm;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.homebutton {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.homebutton:hover {
+    background-color: #ccc;
+}

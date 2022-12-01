@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'templates/qualitychecks/thesauricheck.css' %}">
+    <title>Thesauri Quality</title>
+</head>
+<body class='body'>
+    <div class='homegrid'>
+        <div class='leftbanner'>
+            <div class='images'>
+                <img class='image' src="\static\images\logohvafff000.jpeg">
+                <img class='image2' src="\static\images\thesauri.png">
+            </div>
+        </div>
+        <div class='main'>
+            <div class='header'>
+                <h1>Thesauri Quality Checks</h1>
+            </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+    <div class='homegrid'>
+        <div>
+            <div class='leftbox'>
+                <div>
+                    <button onclick="window.location.href='/'" class="homebutton">HOME</button>
+                </div>
+                <div class='line'>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class='leftbox'>
+                <div class='list'>
+                    <table class='table'>
+                        <tr>
+                          <th>Number</th>
+                          <th>Info</th>
+                        </tr>
+                        <tr>
+                          <td>#01</td>
+                          <td>Missing or wrong external authority</td>
+                        </tr>
+                        <tr>
+                            <td>#02</td>
+                            <td>Double terms</td>
+                        </tr>
+                        <tr>
+                            <td>#03</td>
+                            <td>Double external authorities</td>
+                        </tr>
+                        <tr>
+                            <td>#04</td>
+                            <td>Wrong Wikidata-number</td>
+                        </tr>
+                        <tr>
+                            <td>#05</td>
+                            <td>Wrong AAT-number</td>
+                        </tr>
+                        <tr>
+                            <td>#06</td>
+                            <td>Wrong TGN-number</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class='run'>
+                    <button onclick="window.location.href='/thesauruscheck'" class="runbutton">Run Qualitycheck</button>
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>

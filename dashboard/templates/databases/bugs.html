@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Dosis:wght@200;300;400&family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'templates/databases/bugsstyle.css' %}">
+    <title>Studio</title>
+</head>
+<body class='body'>
+    <div class='homegrid'>
+        <div class='leftbanner'>
+            <div class='images'>
+                <img class='image' src="\static\images\logohva445022.jpeg">
+                <img class='image2' src="\static\images\bug.png">
+            </div>
+        </div>
+        <div class='main'>
+            <div class='header'>
+                <h2>Bugs Database</h2>
+            </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+    <h1>Add Bugreport</h1>
+    <form method="post" action="{% url 'bugs' %}">
+        {% csrf_token %}
+        <div class='formgrid'>
+            <div>
+                Provide unique ID-number: 
+                {{ form.idnumber }}
+            </div>
+            <div>
+                Date of inspection (yyyy-mm-dd): 
+                {{ form.year }}
+            </div>
+            <div>
+                Room inspected: 
+                {{ form.room }}
+            </div>
+            <div>
+                Quantity of bugs found: 
+                {{ form.quantity }}
+            </div>
+            <div>
+                Type of bug found: 
+                {{ form.bug }}
+            </div>
+        </div>
+        <div>
+            <input type="submit" class='homebutton' value="Submit">
+        </div>
+     </form>
+    <div>
+        <h1>Image Requests</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Bug</th>
+                    <th>Room</th>
+                    <th>Quantity</th>
+                </tr>
+                {% for item in all %}
+                <tr>
+                    <td>{{ item.idnumber }}</td>
+                    <td>{{ item.year}}</td>
+                    <td>{{ item.bug }}</td>
+                    <td>{{ item.room }}</td>
+                    <td>{{ item.quantity }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+    </div>
+    <div>
+        <button onclick="window.location.href='/'" class="homebutton">Home</button>
+    </div>
+</body>
+</html>

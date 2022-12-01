@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Dosis:wght@200;300;400&family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'templates/dashboards/thesauristyle.css' %}">
+    <title>Thesauri Dashboard</title>
+</head>
+<body class='body'>
+    <div class='homegrid'>
+        <div class='leftbanner'>
+            <div class='images'>
+                <img class='image' src="\static\images\logohvafff000.jpeg">
+                <img class='image2' src="\static\images\thesauri.png">
+            </div>
+        </div>
+        <div class='main'>
+            <div class='header'>
+                <h1>Thesauri Dashboard</h1>
+            </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+    <div class='homegrid'>
+        <div>
+            <div class='leftbox'>
+                <div>
+                    <button onclick="window.location.href='/'" class="homebutton">HOME</button>
+                </div>
+                <div class='line'>
+                </div>
+            </div>
+        </div>
+        <div class='main'>
+            <div class='mainblock'>
+                <div class='records'>{{ aantal_records|safe }} terms in thesaurus</div>
+            </div>
+            <div class='panel'>
+                <div class='data'>
+                    <div class='table'>
+                        {{ html_status|safe }}
+                    </div>
+                    <div class='graph'>
+                        <img src="data:imagestatus/png;base64,{{ graphStatus|safe }}", style='object-fit: contain'>
+                    </div>
+                </div>
+                <div class='data'>
+                    <div class='table'>
+                        {{ html_ea|safe }}
+                    </div>
+                    <div class='graph'>
+                        <img src="data:imageea/png;base64,{{ graphEa|safe }}", style='object-fit: contain'>
+                    </div>
+                </div>
+                <div class='data'>
+                    <div class='table'>
+                        {{ html_soort|safe }}
+                    </div>
+                    <div class='graph'>
+                        <img src="data:imagesoort/png;base64,{{ graphSoort|safe }}", style='object-fit: contain'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+</body>
+</html>

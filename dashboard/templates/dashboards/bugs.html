@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'templates/dashboards/bugsstyle.css' %}">
+    <title>Bugs</title>
+</head>
+<body class='body'>
+    <div class='homegrid'>
+        <div class='leftbanner'>
+            <div class='images'>
+                <img class='image' src="\static\images\logohva445022.jpeg">
+                <img class='image2' src="\static\images\bug.png">
+            </div>
+            <div>
+                <img src="https://media2.giphy.com/media/lMsfv1SkJrQsDgAmXx/giphy.gif?cid=ecf05e479okhduv0lpvharuffti31uf81n1827lf4gt1bnsu&rid=giphy.gif&ct=s" width="250" />
+            </div>
+        </div>
+        <div class='main'>
+            <div class='header'>
+                <div class='spider'>
+                    <img src="https://media0.giphy.com/media/AFDLK5jU756dW/giphy.gif?cid=ecf05e479okhduv0lpvharuffti31uf81n1827lf4gt1bnsu&rid=giphy.gif&ct=s" width="250" />
+                </div>
+                <h1>BEESTJES</h1>
+            </div>
+            <div class='graphgrid'>
+                <div class='main'>
+                    <div class='panel'>
+                        <div class='data'>
+                            <div class='graph'>
+                                <img src="data:imagemonth/png;base64,{{ graphMonth|safe }}", style='object-fit: contain'>
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imagebug/png;base64,{{ graphBug|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='data'>
+                            <div class='graph'>
+                                <img src="data:imageroom/png;base64,{{ graphRoom|safe }}", style='object-fit: contain'>
+                            </div>
+                            <div class='bug'>
+                                <img src="https://media3.giphy.com/media/O2cnRUaLVuo3J7i0mq/giphy.gif?cid=ecf05e47asmq9xwbtnt2iyhwzr9918t8qvr9s9uuq9hyjxoi&rid=giphy.gif&ct=s" width="250" />
+                            </div>
+                        </div>
+                        <div class='graph2'>
+                            <img src="data:imageroommonth/png;base64,{{ graphRoommonth|safe }}", style='object-fit: contain'>
+                        </div>
+                        <div class='graph2'>
+                            <img src="data:imageroomtype/png;base64,{{ graphRoomtype|safe }}", style='object-fit: contain'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+    <div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Dosis:wght@200;300;400&family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'templates/dashboards/collectionstyle.css' %}">
+    <title>Collection Dashboard</title>
+</head>
+<body class='body'>
+    <div class='homegrid'>
+        <div class='leftbanner'>
+            <div class='images'>
+                <img class='image' src="\static\images\logohva08e8de.jpeg">
+                <img class='image2' src="\static\images\collection.png">
+            </div>
+        </div>
+        <div class='main'>
+            <div class='header'>
+                <h1>Collection Dashboard</h1>
+            </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+    <div class='homegrid'>
+        <div>
+            <div class='leftbox'>
+                <div>
+                    <button onclick="window.location.href='/'" class="homebutton">HOME</button>
+                </div>
+                <div class='line'>
+                </div>
+                <div class="form">
+                    <form method="post">
+                        {% csrf_token %}
+                        <p class='margin'>To get visualisations for a specific set, provide an association or an onderscheidend kenmerk below: </p>
+                        <div class="grid">
+                            <p class='bold'>Select your type:</p>
+                            <div class="check">
+                                <p>Associatie</p><div class='height'>{{form.associatie}}</div>
+                                <p>Medium</p><div class='height'>{{form.onder_kenm}}</div>
+                            </div>
+                            <p class='bold'>Provide association or medium:</p>
+                            <div class="check">
+                                <p>Enter an association:</p><div class='height'>{{form.filter_term}}</div>
+                                <p>Select medium</p><div class='height'>{{form.ok}}</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="homebutton">Get visualisations</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class='main'>
+            <div class='mainblock'>
+                <div class='records'>{{ aantal_records|safe }} records in collection</div>
+                <button class='accordion'>
+                    <div class='accordioncontent'>
+                        <img class='image3' src="\static\images\collection.png">
+                        <div class='title'>
+                            <h2>General Information</h2>
+                        </div>
+                    </div>
+                </button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div class='graphname'>
+                            <h3>1. Medium</h3>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_ok|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageok/png;base64,{{ graphOk|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_on|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageon/png;base64,{{ graphOn|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='graphname'>
+                            <h3>2. Dates</h3>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_datespm|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageDatesPM/png;base64,{{ graphDatesPM|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_dates|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageDates/png;base64,{{ graphDates|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='graphname'>
+                            <h3>3. Associations</h3>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_lf|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imagelevensfasen/png;base64,{{ graphLevensfasen|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_jk|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imagejaarkalender/png;base64,{{ graphJaarkalender|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_vt|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imagevrijetijd/png;base64,{{ graphVrijetijd|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_dl|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imagedagelijksleven/png;base64,{{ graphDagelijksleven|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class='accordion'>
+                    <div class='accordioncontent'>
+                        <img class='image3' src="\static\images\registration.png">
+                        <div class='title'>
+                            <h2>Registration</h2>
+                        </div>
+                    </div>
+                </button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div class='graphname'>
+                            <h3>1. Missing Basis Registration</h3>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_fm|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageMissing/png;base64,{{ graphMissing|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_mf|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageFields/png;base64,{{ graphFields|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class='accordion'>
+                    <div class='accordioncontent'>
+                        <img class='image3' src="\static\images\rights.png">
+                        <div class='title'>
+                            <h2>Rights</h2>
+                        </div>
+                    </div>
+                </button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_rightspm|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageRightsPM/png;base64,{{ graphRightsPM|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>   
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_rights|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageRights/png;base64,{{ graphRights|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <button class='accordion'>
+                    <div class='accordioncontent'>
+                        <img class='image3' src="\static\images\depot.png">
+                        <div class='title'>
+                            <h2>Depot</h2>
+                        </div>
+                    </div>
+                </button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_depot|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageDepot/png;base64,{{ graphDepot|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_standplaatsok|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageStandplaatsOk/png;base64,{{ graphStandplaatsOk|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>   
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_standplaats|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imageStandplaats/png;base64,{{ graphStandplaats|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+                <button class='accordion'>
+                    <div class='accordioncontent'>
+                        <img class='image3' src="\static\images\publish.png">
+                        <div class='title'>
+                            <h2>Published Data</h2>
+                        </div>
+                    </div>
+                </button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div class='data'>
+                            <div class='table'>
+                                {{ html_publication|safe }}
+                            </div>
+                            <div class='graph'>
+                                <img src="data:imagePublication/png;base64,{{ graphPublication|safe }}", style='object-fit: contain'>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+            });
+        }
+    </script>
+</body>
+</html>

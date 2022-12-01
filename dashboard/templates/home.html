@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Dosis:wght@200;300;400&family=IBM+Plex+Sans+JP&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'templates/homestyle.css' %}">
+    <title>Home</title>
+</head>
+<body class='body'>
+    <div class='homegrid'>
+        <div class='leftbanner'>
+            <div>
+                <img class='image' src="\static\images\logohvablack.png">
+            </div>
+            <div>
+                <p class='info'>Latest data-refresh: 21/11/2022</p>
+            </div>
+        </div>
+        <div class='main'>
+            <div class='header'>
+                <h1>DATA PORTAL</h1>
+            </div>
+            <div class='mainblock'>
+                <button class='accordion'>Dashboards</button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div>
+                        </div>
+                        <div class='buttongrid'>
+                            <div>
+                                <button onclick="window.location.href='collection'" class="dashboardbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\collection.png"></div>
+                                        <div class='buttontext'>Collection</div>
+                                    </div>
+                                </button>
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='rschijf'" class="dashboardbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\rschijf.png"></div>
+                                        <div class='buttontext'>R-Schijf</div>
+                                    </div>
+                                </button>                               
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='thesauri'" class="dashboardbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\thesauri.png"></div>
+                                        <div class='buttontext'>Thesauri</div>
+                                    </div>
+                                </button>                               
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='studio'" class="dashboardbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\kennis.png"></div>
+                                        <div class='buttontext'>Studio</div>
+                                    </div>
+                                </button>                                
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='bugs'" class="dashboardbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\bug.png"></div>
+                                        <div class='buttontext'>Beestjes</div>
+                                    </div>
+                                </button>                            
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <button class='accordion'>Quality Checks</button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div>
+                        </div>
+                        <div class='buttongrid'>
+                            <div>
+                                <button onclick="window.location.href='rschijfquality'" class="qualitybutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\rschijf.png"></div>
+                                        <div class='buttontext'>R-Schijf</div>
+                                    </div>
+                                </button>                             
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='registrationquality'" class="qualitybutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\registration.png"></div>
+                                        <div class='buttontext'>Registration</div>
+                                    </div>
+                                </button>  
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='thesauriquality'" class="qualitybutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\thesauri.png"></div>
+                                        <div class='buttontext'>Thesauri</div>
+                                    </div>
+                                </button>                                
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='rightsquality'" class="qualitybutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\rights.png"></div>
+                                        <div class='buttontext'>Rights</div>
+                                    </div>
+                                </button>                              
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <button class='accordion'>Databases</button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div>
+                        </div>
+                        <div class='buttongrid'>
+                            <div>
+                                <button onclick="window.location.href='studiodatabase'" class="databasebutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\kennis.png"></div>
+                                        <div class='buttontext'>Studio</div>
+                                    </div>
+                                </button>                              
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='bugsdatabase'" class="databasebutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\bug.png"></div>
+                                        <div class='buttontext'>Beestjes</div>
+                                    </div>
+                                </button>                              
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <button class='accordion'>Manuals</button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div>
+                        </div>
+                        <div class='buttongrid'>
+                            <div>
+                                <button onclick="window.location.href='registrationmanual'" class="manualbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\registration.png"></div>
+                                        <div class='buttontext'>Registration</div>
+                                    </div>
+                                </button>                              
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='rightsmanual'" class="manualbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\rights.png"></div>
+                                        <div class='buttontext'>Rights</div>
+                                    </div>
+                                </button>                              
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='faq'" class="manualbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\faqs.png"></div>
+                                        <div class='buttontext'>FAQs</div>
+                                    </div>
+                                </button>                               
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <button class='accordion'>Tools</button>
+                <div class='panel'>
+                    <div class='panelgrid'>
+                        <div>
+                        </div>
+                        <div class='buttongrid'>
+                            <div>
+                                <button onclick="window.location.href='rschijftool'" class="toolbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\rschijf.png"></div>
+                                        <div class='buttontext'>Zoeken op R-Schijf</div>
+                                    </div>
+                                </button>                              
+                            </div>
+                            <div>
+                                <button onclick="window.location.href='assotool'" class="toolbutton">
+                                    <div class="buttonlayout">
+                                        <div><img class='buttonimage' src="\static\images\registration.png"></div>
+                                        <div class='buttontext'>Associaties</div>
+                                    </div>
+                                </button>                              
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='rightbanner'>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+            });
+        }
+    </script>
+</body>
+</html>
